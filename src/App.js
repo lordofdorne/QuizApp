@@ -1,29 +1,55 @@
-import React, { useState } from 'react';
-import questions from '../data/questions'
-export default function App() {
+// import React, { useState } from 'react';
+
+// export default function App() {
+//   let questions = require('./Data/questions.json')
+
+//   const [currentQuestion, setCurrentQuestion] = useState(0)
+//   const [showScore, setShowScore] = useState(false)
+//   const [score, setScore] = useState(0)
+//   const [answers, setAnswers] = useState([])
+
+//   const handleAnswers = () => {
+//     const nextQuestion = currentQuestion + 1
+//     if (nextQuestion < questions.length) {
+//       setCurrentQuestion(nextQuestion)
+//     } else {
+//       setShowScore(true)
+//     }
+
+//   }
 
 
-  return (
-    <div className='app'>
+//   const handleCorrect = () => {
+//     setScore(score + 1)
+//     handleAnswers()
+//   }
+//   console.log(currentQuestion)
+//   return (
 
-      {false ? (
-        <div className='score-section'>You scored 1 out of {questions.length}</div>
-      ) : (
-          <>
-            <div className='question-section'>
-              <div className='question-count'>
-                <span>Question 1</span>/{questions.length}
-              </div>
-              <div className='question-text'>This is where the question text should go</div>
-            </div>
-            <div className='answer-section'>
-              <button>Answer 1</button>
-              <button>Answer 2</button>
-              <button>Answer 3</button>
-              <button>Answer 4</button>
-            </div>
-          </>
-        )}
-    </div>
-  );
-}
+
+//     <div className='app'>
+
+
+//       {showScore ? (
+//         <div className='score-section'>You scored {score} out of {questions.length}</div>
+//       ) : (
+//           <>
+//             <div className='question-section'>
+//               <div className='question-count'>
+//                 <span>Question {currentQuestion + 1}</span>/{questions.length}
+//               </div>
+//               <div className='question-text'>{questions[currentQuestion].question}</div>
+//             </div>
+//             <div className='answer-section'>
+//               {/* <ul> */}
+//               {questions[currentQuestion].incorrect.map((choices) => (
+//                 <button onClick={handleAnswers}>{choices}</button>
+//               ))}
+//               <button onClick={handleCorrect}>{questions[currentQuestion].correct}</button>
+//               {/* </ul> */}
+//             </div>
+//           </>
+//         )}
+//     </div>
+//   );
+// }
