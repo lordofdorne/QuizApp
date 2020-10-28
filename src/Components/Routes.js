@@ -1,7 +1,8 @@
-import React, { Component } from 'react'
+import React from 'react'
 import { Route, Switch, BrowserRouter as Router } from 'react-router-dom'
 import Quiz from './Quiz'
 import Navbar from './Navbar'
+import Rounds from './Rounds'
 
 const Home = () => {
   return (
@@ -23,6 +24,7 @@ const Routes = () => {
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/practice" component={Quiz} />
+
           </Switch>
 
         </div>
