@@ -121,15 +121,17 @@ button svg {
 	padding: 10px;
 	display: flex;
 	flex-direction: row;
+	/* justify-content: center; */
 }
 
 .navbar a {
-	float: left;
+	float: center;
 	display: block;
 	color: #f2f2f2;
 	text-align: center;
 	padding: 10px 12px;
 	text-decoration: none;
+	/* justify-content: center; */
 }
 
 .navbar a:hover {
