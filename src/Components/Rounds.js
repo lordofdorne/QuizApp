@@ -1,21 +1,17 @@
-import React, { useState } from 'react';
-import getTenQuestions from '../helperFunctions/getTenQuestions'
+import React, { useState } from 'react'
 
 
+const Rounds = () => {
+  let questions = getTenQuestions(require('../Data/questions.json'))
 
-const Quiz = () => {
-  let questions = require('../Data/questions.json')
-  questions = getTenQuestions(questions)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [showScore, setShowScore] = useState(false)
   const [score, setScore] = useState(0)
 
 
-
   const handleAnswers = () => {
     const nextQuestion = currentQuestion + 1
-
-    if (nextQuestion < 10) {
+    if (nextQuestion < questions.length) {
       setCurrentQuestion(nextQuestion)
     } else {
       setShowScore(true)
@@ -28,20 +24,19 @@ const Quiz = () => {
     setScore(score + 1)
     handleAnswers()
   }
-  console.log(currentQuestion)
+  console.log(questions)
   return (
-
 
     <div className='app'>
 
 
       {showScore ? (
-        <div className='score-section'>You scored {score} out of 10</div>
+        <div className='score-section'>You scored {score} out of {questions.length}</div>
       ) : (
           <>
             <div className='question-section'>
               <div className='question-count'>
-                <span>Question {currentQuestion + 1}</span>/{10}
+                <span>Question {currentQuestion + 1}</span>/{questions.length}
               </div>
               <div className='question-text'>{questions[currentQuestion].question}</div>
             </div>
@@ -57,6 +52,28 @@ const Quiz = () => {
         )}
     </div>
   );
+
 }
 
-export default Quiz
+
+
+const getTenQuestions = (arr) => {
+  let shuffled = arr.sort(() => Math.random - 0.5)
+  let questionBank = []
+  for (let i = 0; i < shuffled.length; i++) {
+    let question = arr[i]
+    while (questionBank.length < 10) {
+      if (!questionBank.includes(question)) {
+        questionBank.push(question)
+      }
+    }
+
+  }
+  return questionBank
+
+
+}
+
+
+
+export default Rounds
