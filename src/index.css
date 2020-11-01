@@ -8,7 +8,7 @@ body {
 }
 * {
 	font-family: "Verdana", cursive, sans-serif;
-	color: #ffffff;
+	color: #000000;
 }
 
 .main-content {
@@ -41,6 +41,8 @@ body {
 	display: flex;
 	font-size: 24px;
 	align-items: center;
+	color: #eee0cb;
+	margin: 30px;
 }
 
 .question-section {
@@ -58,16 +60,6 @@ body {
 
 .question-text {
 	margin-bottom: 12px;
-}
-
-.timer-text {
-	background: rgb(230, 153, 12);
-	padding: 15px;
-	margin-top: 20px;
-	margin-right: 20px;
-	border: 5px solid rgb(255, 189, 67);
-	border-radius: 15px;
-	text-align: center;
 }
 
 .answer-section {
@@ -112,10 +104,11 @@ button svg {
 }
 
 .navbar {
-	position: fixed;
+	/* position: fixed; */
+	display: flex;
 	top: 0;
 	width: 100%;
-	background-color: #949494;
+	background-color: #c3d2d5;
 	color: #444444;
 	height: 60px;
 	padding: 10px;
@@ -126,17 +119,64 @@ button svg {
 
 .navbar a {
 	float: center;
-	display: block;
-	color: #f2f2f2;
+
+	color: #000000;
 	text-align: center;
 	padding: 10px 12px;
 	text-decoration: none;
-	/* justify-content: center; */
 }
 
 .navbar a:hover {
-	background: #ddd;
+	background: #f64740;
 	color: black;
 	transition-duration: 1s;
 	/* transition-property: color; */
+}
+
+.all-view {
+	display: flex;
+	flex-direction: row;
+}
+
+.status {
+	display: flex;
+	flex-direction: column;
+	align-content: flex-start;
+	width: 100%;
+}
+.rows {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin: 4px auto;
+	color: #fff;
+	background: linear-gradient(90deg, #de9151, #9e788f);
+
+	padding: 16px;
+	border-radius: 5px;
+	width: 90%;
+}
+
+h2 {
+	margin: 32px 0;
+	color: #000000;
+	font-size: 24px;
+}
+.questionList {
+	overflow-y: auto;
+}
+
+.paragraph {
+	background-color: #ffc914;
+	padding: 1% 1% 1% 1%;
+	margin: 5% 10% 10% 10%;
+	border-radius: 15px;
+	display: flex;
+	font-size: 20px;
+	line-height: 2em;
+	margin-bottom: 32px;
+}
+
+#next {
+	border: 1px solid;
 }
