@@ -1,3 +1,4 @@
+//Still learning and working on how to test hooks
 // import Quiz from '../Components/Quiz'
 // import React, { useStateMock } from 'react'
 // import Enzyme from 'enzyme'
